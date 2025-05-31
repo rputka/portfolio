@@ -52,11 +52,11 @@ const planets = [
 const planetInfo = {
   mercury: {
     title: 'About',
-    description: "Hi! I'm Ryan, a second-year student at the University of Notre Dame pursuing a degree in Computer Science alongside a minor in Engineering Corporate Practice. I am passionate about leveraging technology to solve complex problems in the finance and healthcare sectors and beyond. As an aspiring software/AI engineer, I am committed to continual learning and growth, tackling new challenges with creativity and determination.",
+    description: "Hi! I'm Ryan, an incoming third-year student at the University of Notre Dame pursuing a degree in Computer Science alongside a minor in Engineering Corporate Practice. I am passionate about leveraging technology to solve complex problems in the finance, healthcare, and technology sectors and beyond. As an aspiring software/AI engineer, I am committed to continual learning and growth, tackling new challenges with creativity and determination.",
     currentRole: {
       title: 'Software Engineer Intern',
       company: 'Proteus, LLC',
-      description: 'I am currently working at Proteus, LLC, a company that offers an alternative investment technology platform, providing access to professionally managed investment strategies from third-party managers for qualified investors. As part of the development team, I am contributing to several AI initiatives that will help streamline tedious investment processes.'
+      description: 'I just finished up my first internship at Proteus, LLC, a company that offers an alternative investment technology platform, providing access to professionally managed investment strategies from third-party managers for qualified investors. As part of the development team, I contributed to several AI initiatives that helped streamline tedious investment processes.'
     },
     education: {
       school: 'University of Notre Dame',
@@ -115,21 +115,23 @@ const planetInfo = {
         title: 'Professional Experience',
         items: [
           {
-            role: 'Intelligent Automation Intern',
+            role: 'Software Engineer Intern',
             company: 'KeyBank',
             duration: 'Summer 2025',
+            location: 'Cleveland, OH',
             description: [
-              'Incoming intern on the Contact Center as a Service (CCaaS) and Intelligent Automation team within the Contact Center, Voice and Chat Technology department'
+              'Incoming intern on the Contact Center Delivery and Voice and Chat Automation team'
             ]
           },
           {
-            role: 'AI Engineer Intern',
+            role: 'AI/ML Engineer Intern',
             company: 'Proteus, LLC',
             duration: 'November 2024 - May 2025',
+            location: 'Remote',
             description: [
-              'Built and deployed a retrieval-augmented generation (RAG) system utilizing LangChain and Azure AI services to extract and summarize financial insights from internal documentation',
-              'Automated the creation of investment reports by developing a FastAPI backend for the RAG system, reducing manual processing time by 95% and significantly accelerating decision-making workflows',
-              'Currently building a machine learning recommendation model to match new investment opportunities with relevant investors based on historical investment patterns and sector exposure'
+              'Developed an investment research platform using Python, FastAPI, Javascript, and Azure AI Search, featuring secure authentication, document management (upload/delete/view), and AI-driven research report generation via Retrieval-Augmented Generation (RAG)',
+              'Integrated multiple internal and external APIs while adhering to the Model-View-Controller (MVC) architecture for scalable and maintainable code',
+              'Achieved a 95% reduction in document processing and report creation time, cutting turnaround from days to minutes and enhancing research efficiency'
             ]
           }
         ]
@@ -142,8 +144,7 @@ const planetInfo = {
             institution: 'University of Notre Dame',
             duration: 'Expected May 2027',
             description: [
-              'Minor: Engineering Corporate Practice',
-              'Relevant Coursework: Calculus I, II, III, Linear Algebra and Differential Equations, Discrete Math, Data Structures, Database Concepts, Introduction to Data Science, Operating System Principles, Systems Programming, Computer Architecture'
+              'Relevant Coursework: Calculus I, II, III, Linear Algebra and Differential Equations, Discrete Math, Fundamentals of Computing, Data Structures, Database Concepts, Operating System Principles, Systems Programming, Computer Architecture'
             ]
           },
           {
@@ -164,9 +165,10 @@ const planetInfo = {
         date: 'Summer 2025',
         role: 'Developer',
         description: [
-          'Web-scraped UFC fight statistics (e.g., fighter records, strikes, grappling metrics) to build a structured dataset',
-          'Engineered an XGBoost model to predict fight outcomes, achieving 80% accuracy on validation data',
-          'Designed the model interface for potential interactive predictions and explored deployment options using Flask'
+          'Utilized a publicly available web scraper to gather comprehensive UFC fight statistics from UFCStats.com',
+          'Currently engineering predictive features such as quality of opposition, current win streak, and activity level',
+          'Planning to train and optimize an XGBoost model with cross-validation for performance evaluation',
+          'Goal: deliver accurate fight outcome predictions along with probability estimates'
         ]
       },
       {
@@ -175,8 +177,8 @@ const planetInfo = {
         date: 'Spring 2025',
         role: 'Developer',
         description: [
-          'Designed and developed a dynamic, outer space-themed portfolio website using HTML, CSS, and React',
-          'Implemented responsive navigation and interactive elements, including animated planet section selectors'
+          'Designed and developed a dynamic, interactive portfolio website using React, featuring an outer space theme with animated planet-based navigation',
+          'Showcased technical skills, projects, and experience through responsive UI components, custom modals, and integrated downloadable resume functionality'
         ]
       },
       {
