@@ -55,8 +55,8 @@ const planetInfo = {
     description: "Hi! I'm Ryan, an incoming third-year student at the University of Notre Dame pursuing a degree in Computer Science alongside a minor in Engineering Corporate Practice. I am passionate about leveraging technology to solve complex problems in the finance, healthcare, and technology sectors and beyond. As an aspiring software/AI engineer, I am committed to continual learning and growth, tackling new challenges with creativity and determination.",
     currentRole: {
       title: 'Software Engineer Intern',
-      company: 'Proteus, LLC',
-      description: 'I just finished up my first internship at Proteus, LLC, a company that offers an alternative investment technology platform, providing access to professionally managed investment strategies from third-party managers for qualified investors. As part of the development team, I contributed to several AI initiatives that helped streamline tedious investment processes.'
+      company: 'Proteus Capital, LLC',
+      description: 'I just finished up my first internship at Proteus Capital, LLC, a company that offers an alternative investment technology platform, providing access to professionally managed investment strategies from third-party managers for qualified investors. As part of the development team, I contributed to several AI initiatives that helped streamline tedious investment processes.'
     },
     education: {
       school: 'University of Notre Dame',
