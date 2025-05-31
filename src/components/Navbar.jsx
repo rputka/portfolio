@@ -66,7 +66,7 @@ const planetInfo = {
     details: [
       { label: 'Location', value: 'Cleveland, OH' },
       { label: 'Availability', value: 'Seeking Summer 2026 internship' },
-      { label: 'Career Interests', value: 'Software or AI/ML Engineering' },
+      { label: 'Career Interests', value: 'Software or AI Engineering' },
       { label: 'Target Industries', value: 'Technology, Finance, or Healthcare'}
     ],
     personal: "Outside of my academic and professional pursuits, I'm an avid Cleveland sports fan. Whether it's the Cavs, Guardians, or (sadly) the Browns, I'm tuned into every game. I love all things rugby and, as a player, competed in 4 different countries (US, France, Japan, Netherlands). Apart from sports, I enjoy spending time outdoors—fishing on Lake Erie and taking my dog Charlie for walks in the Cleveland Metroparks."
@@ -123,7 +123,7 @@ const planetInfo = {
             ]
           },
           {
-            role: 'AI/ML Engineer Intern',
+            role: 'AI Engineer Intern',
             company: 'Proteus, LLC',
             duration: 'November 2024 - May 2025',
             description: [
@@ -160,12 +160,6 @@ const planetInfo = {
     title: 'Projects',
     projects: [
       {
-        title: 'Introductory Machine Learning Guide',
-        date: 'Summer 2025',
-        role: 'Creator',
-        description: 'Researched and compiled the best online resources into a single, structured guide covering: Python, data structures/algorithms, math/statistics, data processing, data science libraries (Pandas, NumPy, Matplotlib), SQL, Git version control, machine learning fundamentals, and model deployment'
-      },
-      {
         title: 'UFC Fight Predictor',
         date: 'Summer 2025',
         role: 'Developer',
@@ -183,6 +177,15 @@ const planetInfo = {
         description: [
           'Designed and developed a dynamic, outer space-themed portfolio website using HTML, CSS, and React',
           'Implemented responsive navigation and interactive elements, including animated planet section selectors'
+        ]
+      },
+      {
+        title: 'Medication Reminder Script',
+        date: 'Winter 2024',
+        role: 'Developer',
+        description: [
+          'Wrote a Python script that sends daily SMS reminders to a friend to take their medication',
+          'Leveraged GitHub Actions for lightweight, serverless task automation and scheduling'
         ]
       }
     ]
