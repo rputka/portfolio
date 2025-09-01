@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { motion } from 'framer-motion'
+
 import { useForm, ValidationError } from '@formspree/react'
 import { 
   EnvelopeIcon,
@@ -40,15 +40,9 @@ const Contact = () => {
     <section id="contact" className="py-20 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
+        <div className="text-center mb-16">
           <div className="mb-8">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 tracking-tight">
+            <h2 className="text-5xl font-bold mb-4 tracking-tight">
               <span className="section-header">
                 Get In Touch
               </span>
@@ -58,17 +52,11 @@ const Contact = () => {
           <p className="text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">
             Ready to bring your ideas to life? Let&apos;s discuss your next project and create something amazing together.
           </p>
-        </motion.div>
+        </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Info */}
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="space-y-8"
-          >
+          <div className="space-y-8">
             <div>
               <h3 className="text-2xl font-bold text-white mb-6">Let&apos;s Connect</h3>
               <p className="text-white/80 leading-relaxed mb-8">
@@ -81,12 +69,8 @@ const Contact = () => {
             {/* Contact Information */}
             <div className="space-y-6">
               {contactInfo.map((info, index) => (
-                <motion.div
+                <div
                   key={info.title}
-                  initial={{ opacity: 0, x: -30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
                   className="flex items-center gap-4"
                 >
                   <div className="p-3 rounded-lg bg-gradient-to-r from-primary-500/20 to-cyan-500/20">
@@ -105,52 +89,36 @@ const Contact = () => {
                       <p className="text-white font-medium">{info.value}</p>
                     )}
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
 
             {/* Social Links */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              viewport={{ once: true }}
-              className="pt-8"
-            >
+            <div className="pt-8">
               <h4 className="text-lg font-semibold text-white mb-4">Follow Me</h4>
               <div className="flex gap-4">
-                <motion.a
-                  whileHover={{ scale: 1.1, y: -2 }}
-                  whileTap={{ scale: 0.9 }}
+                <a
                   href="https://github.com/rputka"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-4 py-2 glass-effect rounded-lg text-white/80 hover:text-primary-400 border border-white/20 hover:border-primary-400/50 transition-all duration-300"
                 >
                   GitHub
-                </motion.a>
-                <motion.a
-                  whileHover={{ scale: 1.1, y: -2 }}
-                  whileTap={{ scale: 0.9 }}
+                </a>
+                <a
                   href="https://www.linkedin.com/in/ryanputka/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-4 py-2 glass-effect rounded-lg text-white/80 hover:text-primary-400 border border-white/20 hover:border-primary-400/50 transition-all duration-300"
                 >
                   LinkedIn
-                </motion.a>
+                </a>
               </div>
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
 
           {/* Contact Form */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="glass-effect rounded-2xl p-8 border border-white/10"
-          >
+          <div className="glass-effect rounded-2xl p-8 border border-white/10">
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* Name Field */}
               <div>
@@ -237,9 +205,7 @@ const Contact = () => {
               </div>
 
               {/* Submit Button */}
-              <motion.button
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
+              <button
                 type="submit"
                 disabled={state.submitting}
                 className="w-full px-8 py-4 bg-gradient-to-r from-primary-500 to-primary-600 rounded-lg font-semibold text-white shadow-lg hover:shadow-primary-500/25 transition-all duration-300 neon-glow disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
@@ -255,32 +221,24 @@ const Contact = () => {
                     Send Message
                   </>
                 )}
-              </motion.button>
+              </button>
             </form>
 
             {/* Status Messages */}
             {state.succeeded && (
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                className="mt-4 p-4 bg-green-500/20 border border-green-500/30 rounded-lg flex items-center gap-3"
-              >
+              <div className="mt-4 p-4 bg-green-500/20 border border-green-500/30 rounded-lg flex items-center gap-3">
                 <CheckCircleIcon className="h-5 w-5 text-green-400" />
                 <span className="text-green-300">Message sent successfully! I&apos;ll get back to you soon.</span>
-              </motion.div>
+              </div>
             )}
 
             {state.errors && (
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                className="mt-4 p-4 bg-red-500/20 border border-red-500/30 rounded-lg flex items-center gap-3"
-              >
+              <div className="mt-4 p-4 bg-red-500/20 border border-red-500/30 rounded-lg flex items-center gap-3">
                 <ExclamationCircleIcon className="h-5 w-5 text-red-400" />
                 <span className="text-red-300">Failed to send message. Please try again later.</span>
-              </motion.div>
+              </div>
             )}
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

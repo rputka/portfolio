@@ -1,6 +1,6 @@
 'use client'
 
-import { motion } from 'framer-motion'
+
 import { 
   ArrowTopRightOnSquareIcon, 
   CodeBracketIcon,
@@ -72,15 +72,9 @@ const Projects = () => {
     <section id="projects" className="py-20 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
+        <div className="text-center mb-16">
           <div className="mb-8">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 tracking-tight">
+            <h2 className="text-5xl font-bold mb-4 tracking-tight">
               <span className="section-header">
                 Projects
               </span>
@@ -91,19 +85,11 @@ const Projects = () => {
             A showcase of my latest work, featuring cutting-edge technologies and innovative solutions 
             that demonstrate my expertise across the full development stack.
           </p>
-        </motion.div>
+        </div>
 
         {/* GitHub CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          viewport={{ once: true }}
-          className="text-center mb-8"
-        >
-          <motion.a
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+        <div className="text-center mb-8">
+          <a
             href="https://github.com/ryanputka"
             target="_blank"
             rel="noopener noreferrer"
@@ -112,19 +98,15 @@ const Projects = () => {
             <EyeIcon className="h-6 w-6 group-hover:animate-bounce" />
             View All Projects on GitHub
             <ChevronRightIcon className="h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
-          </motion.a>
-        </motion.div>
+          </a>
+        </div>
 
         {/* Featured Projects */}
         <div>
           <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
             {projects.map((project, index) => (
-              <motion.div
+              <div
                 key={project.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
                 className="glass-effect rounded-xl p-6 border border-white/10 hover:border-primary-400/30 transition-all duration-300 group hover:scale-[1.02]"
               >
                 <div className="flex items-center justify-between mb-4">
@@ -132,16 +114,14 @@ const Projects = () => {
                     <CodeBracketIcon className="h-6 w-6 text-white" />
                   </div>
                   <div className="flex gap-2">
-                    <motion.a
-                      whileHover={{ scale: 1.1 }}
-                      whileTap={{ scale: 0.9 }}
+                    <a
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="p-2 text-white/60 hover:text-primary-400 transition-colors duration-300"
                     >
                       <CodeBracketIcon className="h-5 w-5" />
-                    </motion.a>
+                    </a>
                   </div>
                 </div>
 
@@ -162,7 +142,7 @@ const Projects = () => {
                     </span>
                   ))}
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>

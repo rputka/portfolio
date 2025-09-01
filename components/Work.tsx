@@ -1,6 +1,6 @@
 'use client'
 
-import { motion } from 'framer-motion'
+
 import { 
   DocumentArrowDownIcon,
   CalendarIcon,
@@ -52,15 +52,9 @@ const Work = () => {
     <section id="work" className="py-20 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
+        <div className="text-center mb-16">
           <div className="mb-8">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 tracking-tight">
+            <h2 className="text-5xl font-bold mb-4 tracking-tight">
               <span className="section-header">
                 Work Experience
               </span>
@@ -71,19 +65,11 @@ const Work = () => {
             A journey through my professional career, showcasing growth, achievements, 
             and the impact I&apos;ve made at each step along the way.
           </p>
-        </motion.div>
+        </div>
 
         {/* Resume Download */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          viewport={{ once: true }}
-          className="text-center mb-8"
-        >
-          <motion.a
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+        <div className="text-center mb-8">
+          <a
             href="/RyanPutka-Resume.pdf"
             download="RyanPutka-Resume.pdf"
             className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-primary-500 to-primary-600 rounded-lg font-semibold text-white shadow-lg hover:shadow-primary-500/25 transition-all duration-300 neon-glow group"
@@ -91,18 +77,14 @@ const Work = () => {
             <DocumentArrowDownIcon className="h-6 w-6 group-hover:animate-bounce" />
             Download Full Resume
             <ChevronRightIcon className="h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
-          </motion.a>
-        </motion.div>
+          </a>
+        </div>
 
         {/* Work Experience Timeline */}
         <div className="space-y-12">
           {workExperience.map((job, index) => (
-            <motion.div
+            <div
               key={`${job.company}-${job.duration}`}
-              initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: index * 0.2 }}
-              viewport={{ once: true }}
               className="relative"
             >
               <div className="glass-effect rounded-2xl p-8 border border-white/10 hover:border-primary-400/30 transition-all duration-500">
@@ -138,17 +120,13 @@ const Work = () => {
                   <h4 className="text-lg font-semibold text-white mb-4">Key Achievements</h4>
                   <div className="grid md:grid-cols-2 gap-3">
                     {job.achievements.map((achievement, achievementIndex) => (
-                      <motion.div
+                      <div
                         key={achievementIndex}
-                        initial={{ opacity: 0, x: -20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.5, delay: achievementIndex * 0.1 }}
-                        viewport={{ once: true }}
                         className="flex items-start gap-3"
                       >
                         <span className="w-2 h-2 bg-primary-400 rounded-full mt-2 flex-shrink-0"></span>
                         <span className="text-white/80 text-sm leading-relaxed">{achievement}</span>
-                      </motion.div>
+                      </div>
                     ))}
                   </div>
                 </div>
@@ -168,31 +146,21 @@ const Work = () => {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 
         {/* Skills Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="mt-12 mb-12"
-        >
+        <div className="mt-12 mb-12">
           <h3 className="text-3xl font-bold text-center mb-12">
             <span className="text-white">Technical Skills</span>
           </h3>
-        </motion.div>
+        </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {skills.map((skillGroup, index) => (
-            <motion.div
+            <div
               key={skillGroup.category}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              viewport={{ once: true }}
               className="glass-effect rounded-xl p-6 border border-white/10 hover:border-primary-400/30 transition-all duration-300"
             >
               <h4 className="text-lg font-semibold text-white mb-4 text-center">
@@ -200,19 +168,15 @@ const Work = () => {
               </h4>
               <div className="space-y-2">
                 {skillGroup.items.map((skill, skillIndex) => (
-                  <motion.div
+                  <div
                     key={skill}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.5, delay: skillIndex * 0.1 }}
-                    viewport={{ once: true }}
                     className="text-center py-2 px-3 bg-white/5 rounded-lg text-white/80 hover:text-primary-400 hover:bg-primary-500/10 transition-all duration-300"
                   >
                     {skill}
-                  </motion.div>
+                  </div>
                 ))}
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>
