@@ -32,7 +32,7 @@ const Projects = () => {
       title: "Apple MCP Server",
       description: "MCP server enabling seamless integration between Claude and Apple productivity apps, performing intelligent, context-aware actions across Apple's ecosystem.",
       image: "/api/placeholder/600/400",
-      technologies: ["Python", "Apple APIs", "Natural Language Processing", "API Integration"],
+      technologies: ["TypeScript", "Natural Language Processing", "API Integration"],
       github: "https://github.com/rputka",
       featured: true,
       color: "from-green-500 to-teal-600"
@@ -41,7 +41,7 @@ const Projects = () => {
       title: "Stock Analysis Agent",
       description: "AI research agent that generates investment theses and SWOT analyses by scraping financial news, parsing SEC filings, and interpreting earnings reports.",
       image: "/api/placeholder/600/400",
-      technologies: ["Python", "LangChain", "Gemini", "Web Scraping", "Financial APIs"],
+      technologies: ["Python", "LangChain", "Google Gemini API", "Web Scraping"],
       github: "https://github.com/rputka",
       featured: false,
       color: "from-orange-500 to-red-600"
@@ -50,7 +50,7 @@ const Projects = () => {
       title: "Portfolio Website",
       description: "Modern, responsive portfolio website showcasing professional experience and projects. Features animated gradient text effects, smooth scrolling, interactive components, and a clean glass-morphism design with professional contact forms.",
       image: "/api/placeholder/600/400",
-      technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Heroicons", "Formspree"],
+      technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
       github: "https://github.com/rputka",
       featured: false,
       color: "from-purple-500 to-pink-600"
